@@ -1,0 +1,6 @@
+CREATE TABLE Inventory (
+ 	Id 		serial		PRIMARY KEY 				NOT NULL,
+	Building 	int		CHECK(Building BETWEEN 1 AND 5)		NOT NULL
+);
+
+

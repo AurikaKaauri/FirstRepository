@@ -28,4 +28,4 @@ CREATE TABLE Examinations (
 );
 	
 
-
+CREATE TABLE Definitions ()
