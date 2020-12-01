@@ -1,0 +1,31 @@
+CREATE TABLE Departments (
+ 	Id 		serial		PRIMARY KEY 				NOT NULL,
+	Building 	int		CHECK(Building BETWEEN 1 AND 5)		NOT NULL,
+	Financing	money		CHECK(Financing>0)	DEFAULT 0 	NOT NULL,
+	Name		varchar(100)	UNIQUE					NOT NULL
+);
+
+CREATE TABLE Diseases (
+	Id		serial		PRIMARY KEY 				NOT NULL,
+	Name		varchar(100)	UNIQUE					NOT NULL,
+	Severity	int		CHECK(Severity>=1)	DEFAULT 1	NOT NULL
+);
+
+CREATE TABLE Doctors (
+	Id		serial		PRIMARY KEY 				NOT NULL,
+	Name		varchar(100)						NOT NULL,
+	Phone		char(10),
+	Salary		numeric		CHECK(Salary>0)				NOT NULL,
+	Surname		text							NOT NULL
+);
+
+CREATE TABLE Examinations (
+	Id		serial		PRIMARY KEY 				NOT NULL,
+	DayOfWeek	int		CHECK(DayofWeek BETWEEN 1 AND 7)	NOT NULL,
+	EndTime		time		CHECK(Endtime>StartTime)		NOT NULL,
+	Name		varchar(100)	UNIQUE					NOT NULL,
+	StartTime	time		CHECK(StartTime BETWEEN '08:00:00' AND '18:00:00')	NOT NULL
+);
+	
+
+
