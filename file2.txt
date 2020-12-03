@@ -3,4 +3,4 @@ CREATE TABLE Inventory (
 	Building 	int		CHECK(Building BETWEEN 1 AND 5)		NOT NULL
 );
 
-
+CREATE TABLE Repository 
