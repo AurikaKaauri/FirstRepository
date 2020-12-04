@@ -27,5 +27,5 @@ CREATE TABLE Examinations (
 	StartTime	time		CHECK(StartTime BETWEEN '08:00:00' AND '18:00:00')	NOT NULL
 );
 	
+CREATE TABLE Inventory ()
 
-CREATE TABLE Definitions ()
